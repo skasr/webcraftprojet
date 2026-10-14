@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - WebCraft Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo">WebCraft <span>Solutions</span></a>
+
+            <button id="burger" aria-label="Ouvrir le menu">☰</button>
+
+            <nav id="menu" aria-label="Menu principal">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#projets">Projets</a></li>
+                    <li><a href="index.html#formations">Formations</a></li>
+                    <li><a href="inscription.html" class="active">Inscription</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="section">
+            <div class="container petit">
+                <h1 class="titre-form">Inscription à une formation</h1>
+                <p class="intro">Remplissez le formulaire ci-dessous. Les champs marqués d'une <span class="etoile">*</span> sont obligatoires.</p>
+
+                <form id="formulaire" class="form-box" novalidate>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span class="etoile">*</span></label>
+                            <input type="text" id="prenom" name="prenom" placeholder="Jean" aria-describedby="erreur-prenom">
+                            <p class="error-text" id="erreur-prenom"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom">Nom <span class="etoile">*</span></label>
+                            <input type="text" id="nom" name="nom" placeholder="Dupont" aria-describedby="erreur-nom">
+                            <p class="error-text" id="erreur-nom"></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="email">Email <span class="etoile">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="jean.dupont@mail.fr" aria-describedby="erreur-email">
+                            <p class="error-text" id="erreur-email"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tel">Téléphone <span class="etoile">*</span></label>
+                            <input type="tel" id="tel" name="tel" placeholder="+33612345678" aria-describedby="erreur-tel">
+                            <p class="error-text" id="erreur-tel"></p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="formation">Formation <span class="etoile">*</span></label>
+                            <select id="formation" name="formation" aria-describedby="erreur-formation">
+                                <option value="">Chargement des formations...</option>
+                            </select>
+                            <p class="error-text" id="erreur-formation"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="niveau">Niveau <span class="etoile">*</span></label>
+                            <select id="niveau" name="niveau" aria-describedby="erreur-niveau">
+                                <option value="">-- Choisir un niveau --</option>
+                                <option value="Débutant">Débutant</option>
+                                <option value="Intermédiaire">Intermédiaire</option>
+                                <option value="Avancé">Avancé</option>
+                            </select>
+                            <p class="error-text" id="erreur-niveau"></p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivation">Motivation <span class="etoile">*</span></label>
+                        <textarea id="motivation" name="motivation" rows="5" placeholder="Pourquoi voulez-vous suivre cette formation ? (50 caractères minimum)" aria-describedby="erreur-motivation"></textarea>
+                        <p class="error-text" id="erreur-motivation"></p>
+                    </div>
+
+                    <fieldset>
+                        <legend>Informations optionnelles</legend>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="entreprise">Entreprise</label>
+                                <input type="text" id="entreprise" name="entreprise" placeholder="Nom de votre entreprise">
+                                <p class="error-text" id="erreur-entreprise"></p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="experience">Expérience (en années)</label>
+                                <input type="number" id="experience" name="experience" min="0" max="50" placeholder="0" aria-describedby="erreur-experience">
+                                <p class="error-text" id="erreur-experience"></p>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" class="btn-submit">Envoyer mon inscription</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-flex">
+            <p>&copy; 2025 WebCraft Solutions - Tous droits réservés</p>
+            <ul class="reseaux">
+                <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+                <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                <li><a href="#" aria-label="Github">Github</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
